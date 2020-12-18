@@ -10,8 +10,8 @@ const errorHandler = (error, req, res, next) => {
     res.status(error.status || 500).json({ message: "Error - You went into a 500 problem - Please try a diffrent senerio" });
 };
 const index = (req, res) => {
-    logger.info('Hey and welcome to first Ex!');
-    res.status(200).json({ message: 'Hey and welcome to first Ex!' });
+    logger.info('Hey and welcome to  Ex!');
+    res.status(200).json({ message: 'Hey and welcome to  Ex!' });
 };
 const routeInvalid = (req, res) => {
     logger.error('You went into a 404 problem - Please try a valid route');
