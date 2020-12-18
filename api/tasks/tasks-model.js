@@ -1,15 +1,15 @@
-const { time } = require('console')
 const {Schema,model}=require('mongoose')
 
-const taskSchema=new Schema({
+const userSchema=new Schema({
     id:{type:Number,index:1,unique:true},
-    day:{type:String,required:true},
-    category:{type:String,required:true},
-    description:{type:String,required:true},
-    takenCaredOff:{type:Boolean,default:false},
+    name:{type:String,required:true},
+    password:{type:Number,required:true},
+    email:{type:String,required:true},
+    availableDay:{type:[String],required:true},
+    daysHelpedWith:{type:[Boolean],default:[]},
     isDeleted:{type:Boolean,default:false}
 })
 
-const task = model('Task',TaskSchema)
+const User=model('User',userSchema)
 
-module.exports = Task;
+module.exports=User
