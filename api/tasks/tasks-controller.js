@@ -3,7 +3,7 @@ const logger = require('../../lib/logs');
 const config = require('../../config/config-default');
 const Task = require('./tasks-model');
 const User = require('../users/users-model');
-const Match = require('../follows/follows-model');
+const Match = require('../matches/matches-model');
 
 let message = '';
 

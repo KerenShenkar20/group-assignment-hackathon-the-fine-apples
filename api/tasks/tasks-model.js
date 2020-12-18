@@ -10,6 +10,6 @@ const taskSchema = new Schema({
     isDeleted:{type:Boolean,default:false}
 })
 
-const Task = model('Task',TaskSchema)
+const Task = model('Task',TaskSchema);
 
-module.exports=Task
+module.exports=Task;
