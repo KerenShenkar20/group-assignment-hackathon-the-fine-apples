@@ -1,5 +1,4 @@
 
-
 function addUser(info) {
     $.ajax({
         url: `http://localhost:3000/api/restaurants`,
@@ -23,5 +22,4 @@ function submit(){
         }
     })
 }
-
 

@@ -11,7 +11,15 @@ body {
     font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
 }
 
+table tbody .get{
+    background-color: rosybrown;
+}
+
+table tbody .give{
+    background-color: aquamarine;
+}
+
 #wrapper {
     margin: 10px auto;
-    width: 90%;
+    width: 70%;
 }
