@@ -12,11 +12,11 @@ body {
 }
 
 table tbody .get{
-    background-color: rosybrown;
+    background-color: rgb(207, 141, 141);
 }
 
 table tbody .give{
-    background-color: aquamarine;
+    background-color: rgb(166, 204, 165);
 }
 
 #wrapper {
