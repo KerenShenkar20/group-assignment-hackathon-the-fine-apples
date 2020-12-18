@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const logger = require('../../lib/logs');
 const config = require('../../config/config-default');
-const Task = require('./tweets-model');
+const Task = require('./tasks-model');
 const User = require('../users/users-model');
-const Match = require('../follows/follows-model');
+const Match = require('../matches/matches-model');
 
 let message = '';
 
@@ -54,15 +54,16 @@ const getTask = async function(req, res){
 const createTask = async function(req, res){
     try{
         logger.info('createTask');
-        if(!req.body.description || !req.body.creationBy){
-            logger.error('Error - Missing Params - can not complete valis creation without (description & creationBy) params');
-            return res.status(400).send('Error - Missing Params - can not complete valis creation without (description & creationBy) params');
+        if(!req.body.description || !req.body.day || !req.body.category){
+            logger.error('Error - Missing Params - can not complete valis creation without (description & day & category) params');
+            return res.status(400).send('Error - Missing Params - can not complete valis creation without (description & day & category) params');
         }
-        let newTask = { id: mongoose.Types.ObjectId(), description: req.body.description, creationBy: req.body.creationBy };
-        const task = await Tweet.findById({id:newTask.id});
+        let newTask = { id: mongoose.Types.ObjectId(), description: req.body.description, day: req.body.day, category: req.body.category  };
+        if (req.body.takenCaredOff) task.takenCaredOff = req.body.takenCaredOff;
+        const task = await Task.findById({id:newTask.id});
         if(!task){
             newTask.save();
-            logger.info(`Success - Created New task ${newTweet}`);
+            logger.info(`Success - Created New task ${newTask}`);
             logger.info(newTask);
             return res.status(200).json(newTask);
         }
@@ -78,14 +79,15 @@ const createTask = async function(req, res){
         return res.status(400).json(message);
     }
 };
-
 const updateTask = async function(req, res){
     try{
         logger.info('updateTask');
         const task = await Task.findById({ id: req.params.id });
         if (req.body.description) task.description = req.body.description;
-        task.creationDate = Date.now();
-        task.update({ id: tweet.id });
+        if (req.body.day) task.day = req.body.day;
+        if (req.body.category) task.category = req.body.category;
+        if (req.body.takenCaredOff) task.takenCaredOff = req.body.takenCaredOff;
+        task.update({ id: task.id });
         logger.info(task);
         return res.status(200).json({task});
     }
@@ -133,4 +135,5 @@ const findMatchingTasks = async function(req,res){
     }
 };
 
-module.exports =  { getAllTweets, getTweet, createTweet, updateTweet, deleteTweet, middlewareTweetId, findUserTweets, findFollowingTweets };
+module.exports =  { middlewareTaskId, getAllTasks, getTask , createTask , updateTask, deleteTask, findUserTasks, findMatchingTasks  };
+
