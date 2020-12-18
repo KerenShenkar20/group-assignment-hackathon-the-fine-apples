@@ -50,8 +50,8 @@ const updateUser = async function(req, res){
     try{
         logger.info('updateUser');
         const user = await User.findById({ id: req.params.id });
-        if (req.body.user_name) user.user_name = req.body.user_name;
-        if (req.body.email) user.email = req.body.email;
+        if (req.body.name) user.name = req.body.name;
+        if (req.body.availableDay) user.availableDay = req.body.availableDay;
         
         User.update({ id: user.id });
         logger.info(user);
