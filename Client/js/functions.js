@@ -1,7 +1,7 @@
 
 function addUser(info) {
     $.ajax({
-        url: `http://localhost:3000/api/restaurants`,
+        url: ``,
         type: 'POST',
         data: info,
         success: function(rest) {
@@ -17,8 +17,8 @@ function submit(){
             name: $("#nameinput").val(),
             email:$("#exampleInputEmail1").val(),
             password: $("#exampleInputPassword1").val(),
-            Categoriestogive: $(".dayav").val(),
-
+            availabalDay: $(".dayav").val(),
+            daysHelpedWIth: $("").val()
         }
     })
 }
