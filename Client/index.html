@@ -8,13 +8,21 @@
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css"/>
 
-        <title>Hackathon</title>
+        <title>The fine apples</title>
         <!-- Change the title to something less generic -->
     </head>
     <body>
         <div id="wrapper">
-            <!-- The form template will help you 
+            <h1>Kotertet</h1><br>
                 <form>
+                    <div class="mb-3">
+                        <label class="form-label">ID</label>
+                        <input type="text" class="form-control" id="idinput">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" id="nameinput">
+                    </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -28,24 +36,71 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="exampleDataList" class="form-label" id=cattogive>Categories to give</label><br>
+                        <input type="checkbox" id="Sunday" name="laundry" value="laundry">
+                        <label for="laundry"> Laundry</label><br>
+                        <input type="checkbox" id="Cooking" name="Cooking" value="Cooking">
+                        <label for="Cooking"> Cooking</label><br>
+                        <input type="checkbox" id="Floorwashing" name="Floorwashing" value="Floorwashing">
+                        <label for="Floorwashing">Floor washing</label><br>
+                        <input type="checkbox" id="Dishwashing" name="Dishwashing" value="Dishwashing">
+                        <label for="Dishwashing">Dishwashing</label><br>
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleDataList" class="form-label">Datalist example</label>
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="San Francisco">
-                            <option value="New York">
-                            <option value="Seattle">
-                            <option value="Los Angeles">
-                            <option value="Chicago">
-                        </datalist>
+                        <label for="exampleDataList" class="form-label">Days available</label><br>
+                        <input type="checkbox" id="Sunday" name="Sunday" class="dayav" value="Sunday">
+                        <label for="Sunday"> Sunday</label><br>
+                        <input type="checkbox" id="Monday" name="Monday" class="dayav" value="Monday">
+                        <label for="Monday"> Monday</label><br>
+                        <input type="checkbox" id="Tuesday" name="Tuesday" class="dayav" value="Tuesday">
+                        <label for="Tuesday">Tuesday</label><br>
+                        <input type="checkbox" id="Wednesday" name="Wednesday" class="dayav" value="Wednesday">
+                        <label for="Wednesday">Wednesday</label><br>
+                        <input type="checkbox" id="Thursday" name="Thursday" class="dayav" value="Thursday">
+                        <label for="Thursday">Thursday</label><br>
+                        <input type="checkbox" id="Friday" name="Friday" class="dayav" value="Friday">
+                        <label for="Friday">Friday</label><br>
+                        <input type="checkbox" id="Saturday" name="Saturday" class="dayav" value="Saturday">
+                        <label for="Saturday">Saturday</label><br>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="exampleDataList" class="form-label">Categories to give</label><br>
+                        <input type="checkbox" id="Sunday" name="laundry" value="laundry">
+                        <label for="laundry"> Laundry</label><br>
+                        <input type="checkbox" id="Cooking" name="Cooking" value="Cooking">
+                        <label for="Cooking"> Cooking</label><br>
+                        <input type="checkbox" id="Floorwashing" name="Floorwashing" value="Floorwashing">
+                        <label for="Floorwashing">Floor washing</label><br>
+                        <input type="checkbox" id="Dishwashing" name="Dishwashing" value="Dishwashing">
+                        <label for="Dishwashing">Dishwashing</label><br>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleDataList" class="form-label" id="">Days needed</label><br>
+                        <input type="checkbox" id="Sunday" name="Sundayn" value="Sundayn">
+                        <label for="Sundayn"> Sunday</label><br>
+                        <input type="checkbox" id="Monday" name="Mondayn" value="Mondayn">
+                        <label for="Mondayn"> Monday</label><br>
+                        <input type="checkbox" id="Tuesdayn" name="Tuesdayn" value="Tuesdayn">
+                        <label for="Tuesdayn">Tuesday</label><br>
+                        <input type="checkbox" id="Wednesdayn" name="Wednesdayn" value="Wednesdayn">
+                        <label for="Wednesdayn">Wednesday</label><br>
+                        <input type="checkbox" id="Thursdayn" name="Thursdayn" value="Thursdayn">
+                        <label for="Thursdayn">Thursday</label><br>
+                        <input type="checkbox" id="Fridayn" name="Fridayn" value="Fridayn">
+                        <label for="Fridayn">Friday</label><br>
+                        <input type="checkbox" id="Saturdayn" name="Saturdayn" value="Saturdayn">
+                        <label for="Saturday">Saturday</label><br>
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
+
                 </form>
-              -->
+              
         </div>
     </body>
 </html>
