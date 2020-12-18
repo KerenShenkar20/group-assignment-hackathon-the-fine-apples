@@ -5,7 +5,7 @@ $(function() {
 
 function getAllTasks() {
     $.ajax({
-        url: 'https://',
+        url: 'https://the-fine-apples.herokuapp.com/',
         type: 'GET',
         success: function(tasks) {
             recreateTaskTable(tasks);
