@@ -7,35 +7,33 @@ function getAllTasks() {
     $.ajax({
         url: 'https://',
         type: 'GET',
-        success: function(rests) {
-            recreateTaskTable(rests);
+        success: function(tasks) {
+            recreateTaskTable(tasks);
         }
     });
 }
 
-function recreateTaskTable(rests) {
+function recreateTaskTable(tasks) {
     $("#task-list").empty();
 
-    rests.forEach(rest => {
-        if (rest.givOrReceive == 'getting') {             // if getting
+    tasks.forEach(task => {
+        if (task.givOrReceive == 'getting') {             // if getting
             $('#task-list').append(
                 '<tr class="get">' +
-                '<th>' + rest.category + '</th>' +
-                '<td>' + rest.givOrReceive + '</td>' +
-                '<td>'  + rest.userName + '</td>' +
-                '<td>' + rest.dayOfWeek + '</td></tr>'
+                '<th>' + task.category + '</th>' +
+                '<td>' + task.givOrReceive + '</td>' +
+                '<td>' + task.userName + '</td>' +
+                '<td>' + task.dayOfWeek + '</td></tr>'
             );
         }
         else {                                          // if giving
             $('#task-list').append(
-                '<tr class="give">' +
-                '<th>' + rest.category + '</th>' +
-                '<td>' + rest.givOrReceive + '</td>' +
-                '<td>'  + rest.userName + '</td>' +
-                '<td>' + rest.dayOfWeek + '</td></tr>'
+                '<tr class="give">'     +
+                '<th>' + task.category  + '</th>' +
+                '<td>' + task.givOrReceive + '</td>' +
+                '<td>' + task.userName  + '</td>' +
+                '<td>' + task.dayOfWeek + '</td></tr>'
             );
         }
     });
-
-    $("#restaurant-result").append('</ul>');
 }
