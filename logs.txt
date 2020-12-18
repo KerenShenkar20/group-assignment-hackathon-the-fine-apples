@@ -2,3 +2,7 @@
 
 2020.12.17, 11:23:04.0742 UTC -> Error : You went into a 404 problem - Please try a valid route
 
+2020.12.18, 11:37:40.0412 UTC -> Error : You went into a 404 problem - Please try a valid route
+
+2020.12.18, 11:37:57.0803 UTC -> Error : Error - Failed searching for all matches + ReferenceError: tasks is not defined
+

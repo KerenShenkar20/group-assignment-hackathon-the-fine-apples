@@ -1,4 +1,4 @@
-const {Schema,model}=require('mongoose')
+const {Schema , model} = require('mongoose')
 
 const taskSchema = new Schema({
     id:{type:Number,index:1},
@@ -10,6 +10,6 @@ const taskSchema = new Schema({
     isDeleted:{type:Boolean,default:false}
 })
 
-const Task = model('Task',TaskSchema);
+const Task = model('Task',taskSchema);
 
 module.exports=Task;
